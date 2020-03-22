@@ -1,0 +1,55 @@
+1, {fn:f }   window
+2 'javascript'  'language'
+3  window
+4
+5 '12'
+6 
+7 <div id="btnBox">
+    <input type="button" value="button_1" />
+    <input type="button" value="button_2" />
+    <input type="button" value="button_3" />
+    <input type="button" value="button_4" />
+    <input type="button" value="button_5" />
+</div>
+?
+<script type="text/javascript">
+    var btnBox=document.getElementById('btnBox'),
+        inputs=btnBox.getElementsByTagName('input');
+    var l=inputs.length;
+    for(var i=0;i<l;i++){
+      input[i].index=i
+        inputs[i].onclick=function(){
+            alert(i);
+        }
+    }
+</script>
+不能实现，目前显示的是最后一个button，循环是每项以字符串的形式储存起来，并没有识别当前项，给每项设置一个自定义属性，后面调用的时候，就可以实现每一项的效果
+
+8  方便团队协作开发，自己的代码不受影响，保护自己写的组件或者方法。 不好的就是如遇到循环事件 ，每一次循环都要产生不销毁的闭包，消耗性能
+
+9 var可以做变量提升，let不能
+  var 可以重复声明同一个变量，let不能重复声明
+  var 都是在全局操作，有vo全局变量对象，也有全局对象go，而let没有go
+let可以产生不销毁的块级作用域，保护变量
+
+10 for (let i = 0; i < 10; i++) {
+    setTimeout(() => {
+        console.log(i);
+    }, 1000);
+}
+ 只需要把var 改成let ，每一次循环都产生不销毁的作用域，保护当前输出项
+
+11 var b = 10;
+(function b() {
+    b = 20;
+    console.log(b);//输出function b（）{...}
+})();
+console.log(b);//10
+
+ var b = 10;
+(function b() {
+   var b = 20; //给私有的b声明一下，产生私有变量
+    console.log(b); //20
+})();
+console.log(b);//20
+11 
