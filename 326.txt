@@ -1,0 +1,71 @@
+ let res=fn(1,2)(3)
+ 
+(function sum(x,y){
+    var  item = x+y;
+    return function fn(z){
+    res=item+z;
+}
+})(1,2)
+let res=sum()
+console.log(res())//1+2+3=6
+
+2  m(4) // 7
+   y.z(5)//10
+  consloe.log(x,y.x)// 16 15
+
+ 3  false  false true  false  object 10 NaN -1 NaN 报错 
+
+4  ‘0’ ‘ 30’
+
+5  ‘Tomundefinedjoin’
+
+6   1  undefined  function（）{this.a=3}  false  true  true
+ 
+7  zhufeng 5000    zhufeng  9    9    5000
+
+8  不会 没有头绪
+
+ 9 function unique(){
+    for（let  i=0;i<ary.length-1;i++){
+       let  item=ary[i];
+      for(let j=1;j<arr.length){
+     if(item===arr[j]{
+    arr[i]=arr[arr.length-1]
+     arr.length--;
+    j--;
+    }
+  }
+}
+ }
+ ary.unique().sort((a,b)=>a-b)
+
+10  let url="locallhost?key1=val1&key2=val2&key3=val3";
+     
+function getParam(){
+         let Param=url.spilt('?')
+         Paramright=Param.spilt('&')
+         for (let i=0;i<Param.length;i++){
+              newParam1=Paramright.spilt('=')[0]
+              newParam2=Paramright.spilt('=')[1]
+         }
+          newParam1[i]=newParam2;
+     }
+     let url="locallhost?key1=val1&key2=val2&key3=val3";
+console.log(url.getParam("key3")); 
+
+
+  附加题 ：1 
+     2  a=1，逻辑与改成逻辑或
+    
+  var a = 1;
+
+if (a == 1 || a == 2 || a == 3) {
+  
+  console.log(1);
+ 
+}
+
+
+3  
+
+4  2  1 4  
